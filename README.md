@@ -1,10 +1,10 @@
 <h1 align="center">
     <br>
     <a href="https://yourweb.com/">
-        <img src="https://yourweb.com/public/images/lampforo.png" alt="My Teacher Academy" width="150">
+        <img src="https://yourweb.com/public/images/lampforo.png" alt="My Coder Academy" width="150">
     </a>
     <br>
-    My Teacher Academy
+    My Coder Academy
     <br>
 </h1>
 
@@ -12,7 +12,7 @@
 
 ![screenshot](screenshot.png)
 
-# Lampforo Laravel 10 
+#  My Coder Academy Laravel 10 
 Open source programming academy
 
 ## Starting 🚀
@@ -70,7 +70,10 @@ _Admin: admin@lampforo.com
 
 ## Technologies 🛠️
 
-* [Laravel 10](https://laravel.com/docs/10.x) 
+* [Laravel 10](https://laravel.com/docs/10.x)
+* [Email Tool](https://mailtrap.io?ref=jonathan61)  
+* [Hosting Tool](https://namecheap.pxf.io/rnOVB5) 
+
 
 ## Courses :movie_camera: 
 
