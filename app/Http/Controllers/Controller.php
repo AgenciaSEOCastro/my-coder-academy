@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use App\Traits\CheckRequest;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 
 
 class Controller extends BaseController
 {
-	use AuthorizesRequests, ValidatesRequests;
+	use AuthorizesRequests, CheckRequest, ValidatesRequests;
 
 	protected $author;
 	protected $copyright;
@@ -17,7 +18,8 @@ class Controller extends BaseController
 	
 
 	public function __construct()
-	{	
+	{
+
 
 		$this->author = 'jonathancastro';
 		$this->copyright = 'agenciaseocastro.blogspot.com';
@@ -26,13 +28,7 @@ class Controller extends BaseController
 
 			exit;
 			
-		}
-
-		if (env("APP_ENDPOINT") != 'https://agenciaseocastro.blogspot.com/p/ingeniero-de-software-venezuela.html') {
-
-			exit;
-			
-		}
+		}		
 
 
 	}

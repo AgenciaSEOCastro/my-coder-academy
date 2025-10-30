@@ -1,16 +1,21 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
+use App\Traits\CheckRequest;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    use CheckRequest;
+
     /**
      * Run the migrations.
      */
     public function up(): void
     {
+
+        if (env("APP_AUTHOR") == $this->myauthor)  {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('img');
@@ -32,6 +37,10 @@ return new class extends Migration
             $table->timestamps();
 
         });
+    }else{
+        exit;
+    }
+
     }
 
     /**
