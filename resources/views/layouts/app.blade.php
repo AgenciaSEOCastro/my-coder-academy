@@ -10,14 +10,14 @@
 
 	@yield('meta')
 
-	@if(env("APP_AUTHOR") == 'jonathancastro' && env("APP_COPYRIGHT") == 'agenciaseocastro.blogspot.com')
+	{{-- @if() --}}
 
 	<meta name="author" content="{{env("APP_AUTHOR")}}">
 	<meta name="copyright" content="{{env("APP_COPYRIGHT")}}" />    
 	
-	@else
+	{{-- @else
 	{{exit}}
-	@endif	
+	@endif	 --}}
 
 
 	<link rel="icon" type="image/x-icon" href="{{URL('public/images')}}/laravelcoders_logo.png" />
