@@ -10,17 +10,22 @@
 
 	@yield('meta')
 
-	{{-- @if() --}}
+	
 
 	<meta name="author" content="{{env("APP_AUTHOR")}}">
-	<meta name="copyright" content="{{env("APP_COPYRIGHT")}}" />    
-	
-	{{-- @else
-	{{exit}}
-	@endif	 --}}
+	<meta name="copyright" content="{{env("APP_COPYRIGHT")}}" />  
 
 
-	<link rel="icon" type="image/x-icon" href="{{URL('public/images')}}/laravelcoders_logo.png" />
+
+	@if(env("APP_ENV") == 'local')
+
+	<link rel="icon" type="image/x-icon" href="{{URL('images')}}/mycodersacademy_logo.png" />
+
+	@else
+
+	<link rel="icon" type="image/x-icon" href="{{URL('public/images')}}/mycodersacademy_logo.png" />
+
+	@endif	
 
 
 
