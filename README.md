@@ -1,11 +1,11 @@
 <h1 align="center">
-    <br>
-    <a href="https://yourweb.com/">
-        <img src="https://yourweb.com/public/images/lampforo.png" alt="My Coder Academy" width="150">
-    </a>
-    <br>
-    My Coder Academy
-    <br>
+	<br>
+	<a href="https://yourweb.com/">
+		<img src="https://yourweb.com/public/images/lampforo.png" alt="My Coder Academy" width="150">
+	</a>
+	<br>
+	My Coder Academy
+	<br>
 </h1>
 
 <br>
@@ -55,13 +55,30 @@ $ composer install
 - Setup .env file 
 
 ```bash
- APP_ENDPOINT=https://yourweb.com/
+APP_ENDPOINT=https://yourweb.com/
+APP_AUTHOR=
+APP_COPYRIGHT=
+
+PATH_LOCAL=yourpath
+PATH_PRODUCTION=yourpath
+
+USER_NAME=yourusername
+USER_EMAIL=youremail
+USER_PASS=yourpassword
 ```
 - Run server  
 
 ```bash
 $ php artisan serve
 ```
+```bash
+$ php artisan migrate
+```
+```bash
+$ php artisan db:seed
+```
+
+
 
 
 ## Access Web-App:

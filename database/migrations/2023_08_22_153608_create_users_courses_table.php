@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-// use App\Models\UserCourse;
+use App\Models\UserCourse;
 
 return new class extends Migration
 {
@@ -20,15 +20,15 @@ return new class extends Migration
     		$table->timestamps();
     	});
 
-    	// $reply = new UserCourse;    	
-    	// $reply->user_id = 2;
-    	// $reply->course_id = 1;      	        
-    	// $reply->save();
+    	$reply = new UserCourse;    	
+    	$reply->user_id = 1;
+    	$reply->course_id = 1;      	        
+    	$reply->save();
 
-     //    $reply = new UserCourse;        
-     //    $reply->user_id = 2;
-     //    $reply->course_id = 2;                  
-     //    $reply->save();
+        $reply = new UserCourse;        
+        $reply->user_id = 1;
+        $reply->course_id = 2;                  
+        $reply->save();
 
     }
 
