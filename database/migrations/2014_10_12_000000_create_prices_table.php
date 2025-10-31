@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-// use App\Models\Price;
+use App\Models\Price;
 
 return new class extends Migration
 {
@@ -19,9 +19,9 @@ return new class extends Migration
             $table->timestamps();
         });
 
-     //    $p = new Price;    	
-    	// $p->price = 10;    	  	        
-    	// $reply->save();
+        $p = new Price;    	
+    	$p->price = 10;    	  	        
+    	$p->save();
     }
 
     /**
