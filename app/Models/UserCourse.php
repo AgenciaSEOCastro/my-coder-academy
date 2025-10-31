@@ -17,5 +17,25 @@ class UserCourse extends Model
 		'course_id'		
 	];
 
+	 public function users()
+    {
+        return $this->belongsToMany(User::class);
+
+         // return $this->belongsToMany(User::class, Course::class);
+
+        // return $this->hasOneThrough(User::class, Course::class);
+
+        // return $this->hasManyThrough(User::class, Course::class);
+    }
+
+     public function courses()
+    {
+        return $this->belongsToMany(Course::class);
+
+        // return $this->hasOneThrough(User::class, Course::class);
+
+        // return $this->hasManyThrough(User::class, Course::class);
+    }
+
 	
 }

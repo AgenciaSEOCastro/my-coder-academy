@@ -14,5 +14,20 @@ class Course extends Model
 		'course_name',
 		'course_url',
 		'price_id'			
-	];	
+	];
+
+
+    public function userscourses(){
+		
+		return $this->hasMany(UserCourse::class);
+	}
+
+	 public function users()
+    {
+        return $this->belongsToMany(Users::class);
+
+        // return $this->hasOneThrough(User::class, Course::class);
+
+        // return $this->hasManyThrough(User::class, Course::class);
+    }	
 }
