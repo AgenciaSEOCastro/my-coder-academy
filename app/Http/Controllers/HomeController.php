@@ -23,16 +23,22 @@ class HomeController extends Controller
     public function index()
     { 
 
-    	$courses = User::with('userscourses')
-    	// ->with('courses')
-    	->get();
+    	$courses = User::find(1)->courses()->orderBy('course_name')->get();
+
+    	// $courses = User::with('courses')
+    	// // ->with('courses')
+    	// ->get();
+
+    	// $courses = User::with('userscourses')
+    	// // ->with('courses')
+    	// ->get();
 
     	
     	// $courses = User::with('userscourses')
     	// ->with('courses')
     	// ->get();
 
-    	// $courses = UserCourse::with('courses')
+    	// $courses = UserCourse::with('users')
     	// // ->with('courses')
     	// ->get();
 

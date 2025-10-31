@@ -17,17 +17,17 @@ class Course extends Model
 	];
 
 
-    public function userscourses(){
+	// public function userscourses(){
 		
-		return $this->hasMany(UserCourse::class);
+	// 	// return $this->hasMany(UserCourse::class);
+
+	// 	return $this->belongsToMany(UserCoursse::class);
+	// }
+
+	public function users()
+	{
+		return $this->belongsToMany(User::class);
+
+		// return $this->belongsToMany(User::class)->using(UserCourse::class);
 	}
-
-	 public function users()
-    {
-        return $this->belongsToMany(Users::class);
-
-        // return $this->hasOneThrough(User::class, Course::class);
-
-        // return $this->hasManyThrough(User::class, Course::class);
-    }	
 }
